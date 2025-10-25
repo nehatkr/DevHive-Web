@@ -1,16 +1,28 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
+import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../utils/constants";
 
 const Login = () => {
-  const [emailId, setEmaiId] = useState("");
-  const [password, setPassword] = useState("");
+  const [emailId, setEmaiId] = useState("neha@gmail.com");
+  const [password, setPassword] = useState("Neha@123");
+  const dispatch = useDispatch(); //this will dispatch an action
+  const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
-      const res = await axios.post("http://localhost:3000/login", {
-        emailId,
-        password,
-      });
+      const res = await axios.post(
+        `${BASE_URL}/login`,
+        {
+          emailId,
+          password,
+        },
+        { withCredentials: true }
+      );
+      dispatch(addUser(res.data)); //here this dispatch action cll the addUser action with the data that we get from the response by hitting the api and add the loggedIn user data to the store
+      return navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +60,9 @@ const Login = () => {
             </label>
           </div>
           <div className="card-actions justify-center m-4">
-            <button className="btn btn-primary" onClick={handleLogin}>Login</button>
+            <button className="btn btn-primary" onClick={handleLogin}>
+              Login
+            </button>
           </div>
         </div>
       </div>

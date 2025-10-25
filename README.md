@@ -1,4 +1,4 @@
-#DevHive 
+# DevHive 
 
 -create a vite + React application
 -remove all unecessary code and crate a hello world app
@@ -12,6 +12,14 @@
 -added outlate in the body component to render profile and login
 -create a footer
 -create a login page
+-install axios
+-CORS -install cors in backend => add middleware to with configurationa: origin , credentials: true
+-while making API call so pass {withCrendials : true}
+-install redux toolkit and react-redux
+-configureStore => Provider => createSlice => add reducer to the store
+-add redux-devTool in the chrome
+-NavBar should update as soon as user logs in 
+-after loging user should redirected to the feed page => used useNavigate hook for this 
 
 
 Body{

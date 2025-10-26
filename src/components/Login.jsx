@@ -8,6 +8,7 @@ import { BASE_URL } from "../utils/constants";
 const Login = () => {
   const [emailId, setEmaiId] = useState("neha@gmail.com");
   const [password, setPassword] = useState("Neha@123");
+  const [error, setError] = useState("")
   const dispatch = useDispatch(); //this will dispatch an action
   const navigate = useNavigate();
 
@@ -24,7 +25,7 @@ const Login = () => {
       dispatch(addUser(res.data)); //here this dispatch action cll the addUser action with the data that we get from the response by hitting the api and add the loggedIn user data to the store
       return navigate("/");
     } catch (err) {
-      console.log(err);
+      setError(err?.response?.data || "Something went wrong!")
     }
   };
 
@@ -59,6 +60,7 @@ const Login = () => {
               />
             </label>
           </div>
+          <p className="text-red-500">{error}</p>
           <div className="card-actions justify-center m-4">
             <button className="btn btn-primary" onClick={handleLogin}>
               Login

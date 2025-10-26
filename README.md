@@ -22,6 +22,8 @@
 -after loging user should redirected to the feed page => used useNavigate hook for this 
 -Insure that user should not go to any page without loggin
 -If token is not present then redirected to the login page
+-build logout feature
+-created a a card for the feed page
 
 Body{
     navBar

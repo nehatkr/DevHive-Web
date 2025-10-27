@@ -25,6 +25,7 @@
 -build logout feature
 -created a a card for the feed page
 -edit profile option is added
+-created a connection page to see all connections
 
 Body{
     navBar

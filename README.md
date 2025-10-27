@@ -24,6 +24,7 @@
 -If token is not present then redirected to the login page
 -build logout feature
 -created a a card for the feed page
+-edit profile option is added
 
 Body{
     navBar

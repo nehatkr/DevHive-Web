@@ -28,6 +28,7 @@
 -created a connection page to see all connections
 -created aconnection request page to see all the connection requests
 -Feature - Accept/Reject Connection Request
+-ignore intrested freature build
 
 Body{
     navBar

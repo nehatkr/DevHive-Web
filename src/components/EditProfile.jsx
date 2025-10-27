@@ -34,6 +34,7 @@ const EditProfile = ({ user }) => {
     }
   };
 
+  
   return (
     <>
     <div className="flex justify-center my-10">

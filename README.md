@@ -26,6 +26,8 @@
 -created a a card for the feed page
 -edit profile option is added
 -created a connection page to see all connections
+-created aconnection request page to see all the connection requests
+-Feature - Accept/Reject Connection Request
 
 Body{
     navBar

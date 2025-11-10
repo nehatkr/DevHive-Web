@@ -26,6 +26,9 @@ const NavBar = () => {
       <div className="flex-1">
         <Link to='/' className="btn btn-ghost text-xl">🧑‍💻DevHive</Link>
       </div>
+      <div className="flex-1">
+        <Link to='/login' className="btn btn-ghost text-xl">Signup</Link>
+      </div>
       {user &&(<div className="flex-none gap-2">
         <div className="dropdown dropdown-end mx-5 flex item-center">
           <p className="px-4">Welcome, {user.firstName}</p>

@@ -26,7 +26,7 @@ const NavBar = () => {
       <div className="flex-1">
         <Link to='/' className="btn btn-ghost text-xl">🧑‍💻DevHive</Link>
       </div>
-      <div className="flex-1">
+      <div className="flex-0">
         <Link to='/login' className="btn btn-ghost text-xl">Signup</Link>
       </div>
       {user &&(<div className="flex-none gap-2">
